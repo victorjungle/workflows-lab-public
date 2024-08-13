@@ -17,4 +17,5 @@ jobs:
           ENVIRONMENT_FLAG: ${{ vars.ENVIRONMENT_FLAG || 'unset' }}
       # environment:
         run: |
+          echo "${{ inputs.environment }}"
           echo "ENVIRONMENT_FLAG = $ENVIRONMENT_FLAG"
