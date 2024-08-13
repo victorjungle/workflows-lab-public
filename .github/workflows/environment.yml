@@ -1,0 +1,18 @@
+name: Actions Environment test
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Environment
+        type: environment
+
+jobs:
+  print-environment:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: print-environment-step-1
+      # environment:
+        run: |
+          echo "ENVIRONMENT_FLAG = ${{ env.ENVIRONMENT_FLAG || 'unset' }}"
