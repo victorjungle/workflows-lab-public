@@ -15,4 +15,4 @@ jobs:
       - name: print-environment-step-1
       # environment:
         run: |
-          echo "ENVIRONMENT_FLAG = ${{ env.ENVIRONMENT_FLAG || 'unset' }}"
+          echo "ENVIRONMENT_FLAG = ${{ vars.ENVIRONMENT_FLAG || 'unset' }}"
