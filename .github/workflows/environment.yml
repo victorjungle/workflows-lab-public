@@ -13,6 +13,8 @@ jobs:
     environment: ${{ inputs.environment }}
     steps:
       - name: print-environment-step-1
+        env:
+          ENVIRONMENT_FLAG: ${{ vars.ENVIRONMENT_FLAG || 'unset' }}
       # environment:
         run: |
-          echo "ENVIRONMENT_FLAG = ${{ vars.ENVIRONMENT_FLAG || 'unset' }}"
+          echo "ENVIRONMENT_FLAG = $ENVIRONMENT_FLAG"
